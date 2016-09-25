@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Character2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Character2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\KingSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\NineHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\TenDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\KingClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ch2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Ch2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\JackSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\QClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blueBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Back\blueBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\QueenSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="misc_menu1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\misc_menu.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="QueenDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\QDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\NineDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\AceDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Character5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\NineSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\JSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\JClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\QSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\AceHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\JackHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Character3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\TenClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\TenDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ch1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Ch1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\QueenClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\deal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Character4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Character4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\QHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Character1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Character1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\AHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cardPlace1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\cardPlace1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AceClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\AClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\JackClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Back\deck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\JDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\KDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="click_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\click_2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NineClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\NineClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\ASpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\TenClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\TenHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="redBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Back\redBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cardSlide6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\cardSlide6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ch3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Ch3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\KHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\JackDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\KingDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenDiamond1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\QueenDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\NineDiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\TenSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QueenHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\QueenHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\NineHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\KClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\NineSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NineClub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\NineClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceSpade1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\AceSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\KSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="JackHeart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\JHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\TenHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KingHeart1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\KingHeart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ch4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Ch4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deckBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Back\deckBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AceDiamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\ADiamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="negative_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Audio\negative_2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AceClub1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Classic\AceClub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TenSpade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Cards\Simple\TenSpade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ch5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\Characters\Ch5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Images\cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

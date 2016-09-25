@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EB7D5D3-3D7A-4E90-B5ED-FF3F591A9399}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WIndowsFormsUI</RootNamespace>
+    <AssemblyName>WIndowsFormsUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\CardBackType.cs" />
+    <Compile Include="Forms\CardControl.cs" />
+    <Compile Include="Forms\CardDeckType.cs" />
+    <Compile Include="Forms\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameRulesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameRulesForm.Designer.cs">
+      <DependentUpon>GameRulesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\SinglePlayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SinglePlayerForm.Designer.cs">
+      <DependentUpon>SinglePlayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Players\ComputerUIPlayer.cs" />
+    <Compile Include="Game\UIGame.cs" />
+    <Compile Include="Players\HumanUIPlayer.cs" />
+    <Compile Include="Game\UIRound.cs" />
+    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameRulesForm.resx">
+      <DependentUpon>GameRulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SinglePlayerForm.resx">
+      <DependentUpon>SinglePlayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArtificialIntelligence\ArtificialIntelligence.csproj">
+      <Project>{08253f8f-4fb9-4486-ba80-a02f8efab3b5}</Project>
+      <Name>ArtificialIntelligence</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameEngine\Game Engine.csproj">
+      <Project>{209a7a17-c789-4635-b334-cbd86620e555}</Project>
+      <Name>Game Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio\click_2.wav" />
+    <None Include="Resources\Images\logo.png" />
+    <None Include="Resources\Audio\negative_2.wav" />
+    <None Include="Resources\Audio\cardSlide6.wav" />
+    <None Include="Resources\Audio\cardPlace1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\AClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\JClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\KClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\NineClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\QClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\TenClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\ADiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\JDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\KDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\NineDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\QDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\TenDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\AHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\JHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\KHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\NineHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\QHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\TenHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\ASpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\KSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\NineSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\QSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\TenSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio\misc_menu.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Audio\deal.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Simple\JSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\AceDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\AceClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\JackClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\KingClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\NineClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\QueenClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\TenClub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\JackDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\KingDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\NineDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\QueenDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\TenDiamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\AceHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\JackHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\KingHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\NineHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\QueenHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\TenHeart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\AceSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\JackSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\KingSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\NineSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\QueenSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Classic\TenSpade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Back\blueBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Back\redBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Back\deck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Ch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Ch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Ch4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Ch3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Ch5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Character1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Character2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Character3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Character4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Characters\Character5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\Cards\Back\deckBlue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\cloud.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

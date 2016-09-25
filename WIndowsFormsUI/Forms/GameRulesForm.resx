@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label17.Text" xml:space="preserve">
+    <value>A player who first reaches 66 points wins game points as follow:
+- One game point if the opponent has 33 or more card points.
+- Two game points if the opponent  has between 1–32 card points.
+- Three game points if the opponent has 0 card points..</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Closing indicates that the closer has a good enough cards  to reach the 66-point target under the stock-depleted rules above. The player must be on lead to the next hand in order to close. It is indicated by turning over the face-up trump card, before or after taking cards to make the back up to 6 cards. The rules change to the strict rules given above for play after the stock is depleted. The stock is now "closed" and players do not replenish their cards, and there is no 10-point bonus for taking the last hand. If the closer reaches 66 card-points first, he scores game points as described below. If he fails to reach 66 card-points or his opponent reaches 66 card-points first, his opponent scores 2 game points, or 3 if that opponent has no hands taken.</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Once the stock is gone, with the turned up trump taken by the loser of the sixth hand, the rules of play change to become more strict. Players now must follow the suit led (winning the hand when possible), they must trump if they have no cards of the suit led, and marriages can no longer be played.</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>On his turn when he has the lead, a player may marry a Queen-King couple of the same suit by playing one and simultaneously showing the other. Regular marriages are worth 20 card points and trump marriages are worth 40. A marriage or meld is usually announced in some way to the other player, often by saying the number of points made. The points do not count towards the player's total until he has taken at least one hand.</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>The holder of the lowest trump card, the nine, can exchange it for the turned up trump. This can be done only by a player who has the lead and has won at least one hand. This exchange cannot be done in the middle of a hand. It must be done just after the players restock their cards, when no cards are in play.</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>The non-dealer leads to the first hand. A hand is taken by the highest card of the suit led that is in the hand, unless the hand contains a card from the trump suit, in which case it is taken by the highest trump card in the hand. Until the stock is gone, there is no obligation to follow suit or to trump. The hand is taken by the winner, turned face down, and should not be looked at again. The winner scores the value of the two cards in the hand, as shown on the table above. Once the hand is played, the winner takes the top card of the stock to replenish his cards, then the loser does the same. The winner of the hand leads to the next hand.</value>
+  </data>
+</root>
