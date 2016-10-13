@@ -1,28 +1,16 @@
-﻿using ArtificialIntelligence;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Media;
 using System.Windows.Forms;
-using System.Xml;
+using WIndowsFormsUI.Properties;
 
 namespace WIndowsFormsUI.Forms
 {
 
     public partial class MainMenuForm : Form
     {
-        private string settings = "settings.xml";
-        private XmlDocument settingsXml = new XmlDocument();
-
-        private string playerName;
-        private CardDeckType deckType;
-        private CardBackType cardsBack;
-        private GameLevel level;
-        private bool enableSound;
-        private bool enableNotifications;
-        private int character;
-
         private SoundPlayer soundPlayer;
 
         public MainMenuForm()
@@ -62,73 +50,9 @@ namespace WIndowsFormsUI.Forms
             }
         }
 
-        private void MainMenuForm_Load(Object sender, EventArgs e)
-        {
-            if (!File.Exists(settings))
-            {
-
-                XmlElement element = settingsXml.CreateElement("settings");
-                settingsXml.AppendChild(element);
-
-                XmlElement tempChild;
-
-                tempChild = settingsXml.CreateElement("playerName");
-                tempChild.InnerText = "Default name";
-                element.AppendChild(tempChild);
-
-                tempChild = settingsXml.CreateElement("level");
-                tempChild.InnerText = GameLevel.Easy.ToString();
-                element.AppendChild(tempChild);
-
-                tempChild = settingsXml.CreateElement("deck");
-                tempChild.SetAttribute("deckType", CardDeckType.Classic.ToString());
-                tempChild.SetAttribute("cardsBack", CardBackType.Red.ToString());
-                element.AppendChild(tempChild);
-
-                tempChild = settingsXml.CreateElement("sound");
-                tempChild.SetAttribute("enable", "true");
-                element.AppendChild(tempChild);
-
-                tempChild = settingsXml.CreateElement("notifications");
-                tempChild.SetAttribute("enable", "true");
-                element.AppendChild(tempChild);
-
-                tempChild = settingsXml.CreateElement("character");
-                tempChild.SetAttribute("image", "1");
-                element.AppendChild(tempChild);
-
-            }
-            else
-            {
-                this.settingsXml.Load(this.settings);
-
-                XmlElement element = settingsXml.DocumentElement;
-
-                this.playerName = element.ChildNodes[0].InnerText;
-
-                this.level = (GameLevel)Enum.Parse(typeof(GameLevel), element.ChildNodes[1].InnerText);
-
-                this.deckType = (CardDeckType)Enum.Parse(typeof(CardDeckType), element.ChildNodes[2].Attributes[0].Value);
-
-                this.cardsBack = (CardBackType)Enum.Parse(typeof(CardBackType), element.ChildNodes[2].Attributes[1].Value);
-
-                if (element.ChildNodes[3].Attributes[0].Value == "true")
-                    this.enableSound = true;
-                else
-                    this.enableSound = false;
-
-                if (element.ChildNodes[4].Attributes[0].Value == "true")
-                    this.enableNotifications = true;
-                else
-                    this.enableNotifications = false;
-
-                this.character = int.Parse(element.ChildNodes[5].Attributes[0].Value);
-            }
-        }
-
         private void PlaySound(UnmanagedMemoryStream sound)
         {
-            if (this.enableSound)
+            if (Settings.Default.sound)
             {
                 soundPlayer.Stream = sound;
                 soundPlayer.Play();
@@ -155,6 +79,17 @@ namespace WIndowsFormsUI.Forms
         private void optionsButton_MouseLeave(object sender, EventArgs e)
         {
             optionsButton.BackColor = Color.FromArgb(5, 35, 35);
+        }
+
+        private void statsButton_MouseEnter(object sender, EventArgs e)
+        {
+            statsButton.BackColor = Color.FromArgb(200, 5, 35, 35);
+            this.PlaySound(WIndowsFormsUI.Properties.Resources.misc_menu1);
+        }
+
+        private void statsButton_MouseLeave(object sender, EventArgs e)
+        {
+            statsButton.BackColor = Color.FromArgb(5, 35, 35);
         }
 
         private void rulesButton_MouseEnter(object sender, EventArgs e)
@@ -189,54 +124,32 @@ namespace WIndowsFormsUI.Forms
         private void playButton_Click(object sender, EventArgs e)
         {
             SinglePlayerForm singlePlayerForm =
-                new SinglePlayerForm(this.playerName, this.level, this.deckType, this.cardsBack, this.enableSound, this.enableNotifications, this.character);
+                new SinglePlayerForm(Settings.Default.playerName, Settings.Default.level, Settings.Default.deckType, 
+                    Settings.Default.cardBack, Settings.Default.sound, Settings.Default.notifications, Settings.Default.character);
             singlePlayerForm.Show();
             this.Hide();
         }
 
         private void optionsButton_Click(object sender, EventArgs e)
         {
-            OptionsForm of = new OptionsForm(settingsXml);
+            OptionsForm of = new OptionsForm();
             if (of.ShowDialog() == DialogResult.OK)
             {
-                this.playerName = of.PlayerName;
-                this.settingsXml.DocumentElement.ChildNodes[0].InnerText = of.PlayerName;
+                Settings.Default.playerName = of.PlayerName;
 
-                this.level = of.Level;
-                this.settingsXml.DocumentElement.ChildNodes[1].InnerText = of.Level.ToString();
+                Settings.Default.level = of.Level;
 
-                this.deckType = of.DeckType;
-                this.settingsXml.DocumentElement.ChildNodes[2].Attributes[0].Value = of.DeckType.ToString();
+                Settings.Default.deckType = of.DeckType;
 
-                this.cardsBack = of.CardsBack;
-                this.settingsXml.DocumentElement.ChildNodes[2].Attributes[1].Value = of.CardsBack.ToString();
+                Settings.Default.cardBack = of.CardsBack;
 
-                if (of.Sound)
-                {
-                    this.enableSound = true;
-                    this.settingsXml.DocumentElement.ChildNodes[3].Attributes[0].Value = "true";
-                }
-                else
-                {
-                    this.enableSound = false;
-                    this.settingsXml.DocumentElement.ChildNodes[3].Attributes[0].Value = "false";
-                }
+                Settings.Default.sound = of.Sound;
 
-                if (of.Notifications)
-                {
-                    this.enableNotifications = true;
-                    this.settingsXml.DocumentElement.ChildNodes[4].Attributes[0].Value = "true";
-                }
-                else
-                {
-                    this.enableNotifications = false;
-                    this.settingsXml.DocumentElement.ChildNodes[4].Attributes[0].Value = "false";
-                }
+                Settings.Default.notifications = of.Notifications;
 
-                this.character = of.Character;
-                this.settingsXml.DocumentElement.ChildNodes[5].Attributes[0].Value = of.Character.ToString();
+                Settings.Default.character = of.Character;
 
-                this.settingsXml.Save(settings);
+                Settings.Default.Save();
             }
         }
 
@@ -244,6 +157,12 @@ namespace WIndowsFormsUI.Forms
         {
             GameRulesForm grf = new GameRulesForm();
             grf.ShowDialog();
+        }
+
+        private void statsButton_Click(object sender, EventArgs e)
+        {
+            StatsForm sf = new StatsForm();
+            sf.ShowDialog();
         }
     }
 }

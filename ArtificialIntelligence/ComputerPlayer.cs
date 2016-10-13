@@ -243,9 +243,10 @@ namespace ArtificialIntelligence
 
                 if (firstPlayerRoundPoints >= 66 - sumOfPoints)
                 {
-                    if (opponentBiggestTrumpCard == null
-                        || myTrumpCard.Value() > opponentBiggestTrumpCard.Value())
+                    if (opponentBiggestTrumpCard == null || myTrumpCard.Value() > opponentBiggestTrumpCard.Value())
+                    {
                         return myTrumpCard;
+                    }
                 }
             }
 
@@ -261,7 +262,9 @@ namespace ArtificialIntelligence
                    .FirstOrDefault();
 
             if (biggerCard != null)
+            {
                 return new PlayerMove(PlayerMoveType.PlayCard, biggerCard, Announce.None);
+            }
 
             Card smallestTrumpCard =
                 possibleCardsToPlay.Where(x => x.Suit == context.TrumpCard.Suit)
@@ -269,7 +272,9 @@ namespace ArtificialIntelligence
                     .FirstOrDefault();
 
             if (smallestTrumpCard != null)
+            {
                 return new PlayerMove(PlayerMoveType.PlayCard, smallestTrumpCard, Announce.None);
+            }
 
             Card cardToPlay = possibleCardsToPlay.OrderBy(x => x.Value()).FirstOrDefault();
             return new PlayerMove(PlayerMoveType.PlayCard, cardToPlay, Announce.None);
@@ -280,7 +285,8 @@ namespace ArtificialIntelligence
         {
             bool opponentHasTrump = this.cardTracker.PossibleOpponentCards.Any(x => x.Suit == context.TrumpCard.Suit);
 
-            Card trumpCard = this.GetCardWhichWillSurelyWinTheTrick(context.TrumpCard.Suit, opponentHasTrump);
+            //Card trumpCard = this.GetCardWhichWillSurelyWinTheTrick(context.TrumpCard.Suit, opponentHasTrump);
+            /*
             if (trumpCard != null)
             {
                 if (PossibleAnnounce(trumpCard, context.TrumpCard) == Announce.Fourty)
@@ -288,6 +294,7 @@ namespace ArtificialIntelligence
                 else
                     return new PlayerMove(PlayerMoveType.PlayCard, trumpCard, Announce.None);
             }
+            */
 
             foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
             {

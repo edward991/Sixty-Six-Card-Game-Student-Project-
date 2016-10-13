@@ -29,8 +29,11 @@ namespace WIndowsFormsUI
         {
             base.Restart();
             Thread.Sleep(1000);
-            UpdateRoundPoints?.Invoke(this, new Tuple<int, int, bool>(0, 0, false));
-            RestartRound?.Invoke(this, null);
+            if (!IsFinished())
+            {
+                UpdateRoundPoints?.Invoke(this, new Tuple<int, int, bool>(0, 0, false));
+                RestartRound?.Invoke(this, null);
+            }
         }
 
         protected override Round GenerateRound()

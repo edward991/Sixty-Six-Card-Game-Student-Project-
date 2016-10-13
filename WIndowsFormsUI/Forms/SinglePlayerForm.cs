@@ -13,6 +13,7 @@ using GameEngine;
 using GameEngine.Players;
 using GameEngine.Cards;
 using ArtificialIntelligence;
+using WIndowsFormsUI.Properties;
 
 namespace WIndowsFormsUI.Forms
 {
@@ -20,7 +21,6 @@ namespace WIndowsFormsUI.Forms
     {
         private HumanUIPlayer userPlayer;
         private ComputerUIPlayer computerPlayer;
-        private ComputerUIPlayer otherComputerPlayer;
         private UIGame game;
 
         private List<CardControl> userCardsControls;
@@ -60,19 +60,23 @@ namespace WIndowsFormsUI.Forms
             this.level = level;
 
             if (deckType == CardDeckType.Classic)
+            {
                 MappClassicCards();
+            }
             if (deckType == CardDeckType.Simple)
+            {
                 MappSimpleCards();
+            }
 
             if (cardBack == CardBackType.Blue)
             {
-                cardBackImage = new Bitmap(WIndowsFormsUI.Properties.Resources.blueBack);
-                deckImage = new Bitmap(WIndowsFormsUI.Properties.Resources.deckBlue);
+                cardBackImage = new Bitmap(Resources.blueBack);
+                deckImage = new Bitmap(Resources.deckBlue);
             }
             if (cardBack == CardBackType.Red)
             {
-                cardBackImage = new Bitmap(WIndowsFormsUI.Properties.Resources.redBack);
-                deckImage = new Bitmap(WIndowsFormsUI.Properties.Resources.deck);
+                cardBackImage = new Bitmap(Resources.redBack);
+                deckImage = new Bitmap(Resources.deck);
             }
 
             this.cardsInDeck = 24;
@@ -112,6 +116,7 @@ namespace WIndowsFormsUI.Forms
             Rectangle rectangle1 = new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height / 2 + 1);
             Rectangle rectangle2 =
                 new Rectangle(0, ClientRectangle.Height / 2, ClientRectangle.Width, ClientRectangle.Height - ClientRectangle.Height / 2);
+
 
             using (
 
@@ -189,60 +194,60 @@ namespace WIndowsFormsUI.Forms
         {
             cardsImages = new Dictionary<Card, Bitmap>();
 
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Club), WIndowsFormsUI.Properties.Resources.AceClub1);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.AceDiamond1);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.AceHeart1);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.AceSpade1);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Club), WIndowsFormsUI.Properties.Resources.JackClub1);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.JackDiamond1);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.JackHeart1);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.JackSpade1);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Club), WIndowsFormsUI.Properties.Resources.KingClub1);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.KingDiamond1);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.KingHeart1);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.KingSpade1);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Club), WIndowsFormsUI.Properties.Resources.NineClub1);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.NineDiamond1);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.NineHeart1);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.NineSpade1);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Club), WIndowsFormsUI.Properties.Resources.QueenClub1);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.QueenDiamond1);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.QueenHeart1);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.QueenSpade1);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Club), WIndowsFormsUI.Properties.Resources.TenClub1);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.TenDiamond1);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.TenHeart1);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.TenSpade1);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Club), Resources.AceClub1);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Diamond), Resources.AceDiamond1);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Heart), Resources.AceHeart1);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Spade), Resources.AceSpade1);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Club), Resources.JackClub1);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Diamond), Resources.JackDiamond1);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Heart), Resources.JackHeart1);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Spade), Resources.JackSpade1);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Club), Resources.KingClub1);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Diamond), Resources.KingDiamond1);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Heart), Resources.KingHeart1);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Spade), Resources.KingSpade1);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Club), Resources.NineClub1);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Diamond), Resources.NineDiamond1);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Heart), Resources.NineHeart1);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Spade), Resources.NineSpade1);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Club), Resources.QueenClub1);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Diamond), Resources.QueenDiamond1);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Heart), Resources.QueenHeart1);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Spade), Resources.QueenSpade1);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Club), Resources.TenClub1);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Diamond), Resources.TenDiamond1);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Heart), Resources.TenHeart1);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Spade), Resources.TenSpade1);
         }
 
         private void MappSimpleCards()
         {
             this.cardsImages = new Dictionary<Card, Bitmap>();
 
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Club), WIndowsFormsUI.Properties.Resources.AceClub);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.AceDiamond);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.AceHeart);
-            cardsImages.Add(new Card(CardType.Ace, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.AceSpade);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Club), WIndowsFormsUI.Properties.Resources.JackClub);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.JackDiamond);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.JackHeart);
-            cardsImages.Add(new Card(CardType.Jack, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.JackSpade);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Club), WIndowsFormsUI.Properties.Resources.KingClub);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.KingDiamond);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.KingHeart);
-            cardsImages.Add(new Card(CardType.King, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.KingSpade);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Club), WIndowsFormsUI.Properties.Resources.NineClub);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.NineDiamond);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.NineHeart);
-            cardsImages.Add(new Card(CardType.Nine, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.NineSpade);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Club), WIndowsFormsUI.Properties.Resources.QueenClub);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.QueenDiamond);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.QueenHeart);
-            cardsImages.Add(new Card(CardType.Queen, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.QueenSpade);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Club), WIndowsFormsUI.Properties.Resources.TenClub);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Diamond), WIndowsFormsUI.Properties.Resources.TenDiamond);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Heart), WIndowsFormsUI.Properties.Resources.TenHeart);
-            cardsImages.Add(new Card(CardType.Ten, CardSuit.Spade), WIndowsFormsUI.Properties.Resources.TenSpade);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Club), Resources.AceClub);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Diamond), Resources.AceDiamond);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Heart), Resources.AceHeart);
+            cardsImages.Add(new Card(CardType.Ace, CardSuit.Spade), Resources.AceSpade);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Club), Resources.JackClub);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Diamond), Resources.JackDiamond);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Heart), Resources.JackHeart);
+            cardsImages.Add(new Card(CardType.Jack, CardSuit.Spade), Resources.JackSpade);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Club), Resources.KingClub);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Diamond), Resources.KingDiamond);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Heart), Resources.KingHeart);
+            cardsImages.Add(new Card(CardType.King, CardSuit.Spade), Resources.KingSpade);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Club), Resources.NineClub);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Diamond), Resources.NineDiamond);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Heart), Resources.NineHeart);
+            cardsImages.Add(new Card(CardType.Nine, CardSuit.Spade), Resources.NineSpade);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Club), Resources.QueenClub);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Diamond), Resources.QueenDiamond);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Heart), Resources.QueenHeart);
+            cardsImages.Add(new Card(CardType.Queen, CardSuit.Spade), Resources.QueenSpade);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Club), Resources.TenClub);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Diamond), Resources.TenDiamond);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Heart), Resources.TenHeart);
+            cardsImages.Add(new Card(CardType.Ten, CardSuit.Spade), Resources.TenSpade);
         }
 
         private void InitializeCardControls()
@@ -250,31 +255,19 @@ namespace WIndowsFormsUI.Forms
             userCardsControls = new List<CardControl>();
             computerCardsControls = new List<CardControl>();
 
-            this.userCardsControls.Add(
-                new CardControl(pictureBox1, pictureBox1.Location));
-            this.userCardsControls.Add(
-                new CardControl(pictureBox2, pictureBox2.Location));
-            this.userCardsControls.Add(
-                new CardControl(pictureBox3, pictureBox3.Location));
-            this.userCardsControls.Add(
-                new CardControl(pictureBox4, pictureBox4.Location));
-            this.userCardsControls.Add(
-                new CardControl(pictureBox5, pictureBox5.Location));
-            this.userCardsControls.Add(
-                new CardControl(pictureBox6, pictureBox6.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox1, pictureBox1.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox2, pictureBox2.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox3, pictureBox3.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox4, pictureBox4.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox5, pictureBox5.Location));
+            this.userCardsControls.Add(new CardControl(pictureBox6, pictureBox6.Location));
 
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox7, pictureBox7.Location));
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox8, pictureBox8.Location));
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox9, pictureBox9.Location));
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox10, pictureBox10.Location));
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox11, pictureBox11.Location));
-            this.computerCardsControls.Add(
-                new CardControl(pictureBox12, pictureBox12.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox7, pictureBox7.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox8, pictureBox8.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox9, pictureBox9.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox10, pictureBox10.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox11, pictureBox11.Location));
+            this.computerCardsControls.Add(new CardControl(pictureBox12, pictureBox12.Location));
         }
 
         private void ChooseCharactersImages(int characterImage)
@@ -282,47 +275,27 @@ namespace WIndowsFormsUI.Forms
             switch (characterImage)
             {
                 case 1:
-                    userCharacterImage = WIndowsFormsUI.Properties.Resources.Character1;
+                    userCharacterImage = Resources.Character1;
                     break;
                 case 2:
-                    userCharacterImage = WIndowsFormsUI.Properties.Resources.Character2;
+                    userCharacterImage = Resources.Character2;
                     break;
                 case 3:
-                    userCharacterImage = WIndowsFormsUI.Properties.Resources.Character3;
+                    userCharacterImage = Resources.Character3;
                     break;
                 case 4:
-                    userCharacterImage = WIndowsFormsUI.Properties.Resources.Character4;
+                    userCharacterImage = Resources.Character4;
                     break;
                 case 5:
-                    userCharacterImage = WIndowsFormsUI.Properties.Resources.Character5;
+                    userCharacterImage = Resources.Character5;
                     break;
                 default:
                     break;
             }
             userCharacterPictureBox.Image = userCharacterImage;
 
-            int a = (new Random()).Next(1, 5);
-            switch (a)
-            {
-                case 1:
-                    computerCharacterImage = WIndowsFormsUI.Properties.Resources.Character1;
-                    break;
-                case 2:
-                    computerCharacterImage = WIndowsFormsUI.Properties.Resources.Character2;
-                    break;
-                case 3:
-                    computerCharacterImage = WIndowsFormsUI.Properties.Resources.Character3;
-                    break;
-                case 4:
-                    computerCharacterImage = WIndowsFormsUI.Properties.Resources.Character4;
-                    break;
-                case 5:
-                    computerCharacterImage = WIndowsFormsUI.Properties.Resources.Character5;
-                    break;
-                default:
-                    break;
-            }
-            computerCharacterPictureBox.Image = computerCharacterImage;
+            computerCharacterImage = Resources.ComputerCharacter;
+            computerCharacterPictureBox.Image = Resources.ComputerCharacter;
 
         }
 
@@ -374,6 +347,12 @@ namespace WIndowsFormsUI.Forms
 
                 if (e.Item3 != -1)
                 {
+                    /*
+                    computerCardsControls[e.Item3].Card = (e.Item1.Type == CardType.Queen) ?
+                        new Card(CardType.King, e.Item1.Suit) : new Card(CardType.Queen, e.Item1.Suit);
+                    computerCardsControls[e.Item3].PictureBox.Image = cardsImages[computerCardsControls[e.Item3].Card];
+                    */
+
                     computerRoundPointsLabel.Text =
                     (Int32.Parse(computerRoundPointsLabel.Text.ToString()) + e.Item4).ToString();
 
@@ -403,8 +382,11 @@ namespace WIndowsFormsUI.Forms
             Invoke((MethodInvoker)delegate ()
             {
                 if (e != null)
+                {
                     BackCardOnItsPlace(e);
-                PlaySound(WIndowsFormsUI.Properties.Resources.negative_2);
+                }
+
+                this.PlaySound(Resources.negative_2);
                 this.UpdateNotificationLabel("Invalid move!!!", this.userPlayerMessageCloud, this.userPlayerMessageLabel);
             });
         }
@@ -412,28 +394,29 @@ namespace WIndowsFormsUI.Forms
         private void HumanPlayer_Announced(object sender, int e)
         {
             Invoke((MethodInvoker)delegate ()
-           {
+            {
                this.userRoundPointsLabel.Text = (Int32.Parse(userRoundPointsLabel.Text) + e).ToString();
                this.UpdateNotificationLabel(
                    this.userNameLabel.Text + " announce \n" + e.ToString(), this.userPlayerMessageCloud, this.userPlayerMessageLabel);
-           }
-                );
+            });
         }
 
         private void ComputerPlayer_MyTurn(object sender, EventArgs e)
         {
             Invoke((MethodInvoker)delegate ()
             {
-                userGamePointsLabel.BackColor = Color.FromArgb(150, 5, 35, 35);
-                userNameLabel.BackColor = Color.FromArgb(150, 240, 140, 0);
-                userGamePointsLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
-                userNameLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
-                userCharacterPictureBox.Image = ChangeOpacity(userCharacterImage, 0.59F);
+                this.userGamePointsLabel.BackColor = Color.FromArgb(150, 5, 35, 35);
+                this.userNameLabel.BackColor = Color.FromArgb(150, 240, 140, 0);
+                this.userGamePointsLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
+                this.userNameLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
+                this.userCharacterPictureBox.Image = ChangeOpacity(userCharacterImage, 0.59F);
 
                 foreach (var control in this.userCardsControls)
                 {
                     if (!control.Empty && !control.InCenter)
+                    {
                         control.PictureBox.Image = ChangeOpacity(cardsImages[control.Card], 0.5F);
+                    }
                 }
             });
         }
@@ -443,20 +426,24 @@ namespace WIndowsFormsUI.Forms
             Invoke((MethodInvoker)delegate ()
             {
                 this.isMyTurn = true;
-                computerGamePointsLabel.BackColor = Color.FromArgb(150, 5, 35, 35);
-                computerNameLabel.BackColor = Color.FromArgb(150, 240, 140, 0);
-                computerGamePointsLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
-                computerNameLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
-                computerCharacterPictureBox.Image = ChangeOpacity(computerCharacterImage, 0.59F);
+                this.computerGamePointsLabel.BackColor = Color.FromArgb(150, 5, 35, 35);
+                this.computerNameLabel.BackColor = Color.FromArgb(150, 240, 140, 0);
+                this.computerGamePointsLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
+                this.computerNameLabel.ForeColor = Color.FromArgb(150, Color.WhiteSmoke);
+                this.computerCharacterPictureBox.Image = ChangeOpacity(computerCharacterImage, 0.59F);
 
                 foreach (var control in this.computerCardsControls)
                 {
                     if (!control.Empty && !control.InCenter)
                     {
                         if (control.Card == null)
+                        {
                             control.PictureBox.Image = ChangeOpacity(cardBackImage, 0.5F);
+                        }
                         else
+                        {
                             control.PictureBox.Image = ChangeOpacity(this.cardsImages[control.Card], 0.5F);
+                        }
                     }
                 }
             });
@@ -466,32 +453,38 @@ namespace WIndowsFormsUI.Forms
         {
             Invoke((MethodInvoker)delegate ()
             {
-                isMyTurn = false;
-                computerGamePointsLabel.BackColor = Color.FromArgb(5, 35, 35);
-                computerNameLabel.BackColor = Color.FromArgb(240, 140, 0);
-                computerGamePointsLabel.ForeColor = Color.WhiteSmoke;
-                computerNameLabel.ForeColor = Color.WhiteSmoke;
-                userGamePointsLabel.BackColor = Color.FromArgb(5, 35, 35);
-                userNameLabel.BackColor = Color.FromArgb(240, 140, 0);
-                userGamePointsLabel.ForeColor = Color.WhiteSmoke;
-                userNameLabel.ForeColor = Color.WhiteSmoke;
-                computerCharacterPictureBox.Image = computerCharacterImage;
-                userCharacterPictureBox.Image = userCharacterImage;
+                this.isMyTurn = false;
+                this.computerGamePointsLabel.BackColor = Color.FromArgb(5, 35, 35);
+                this.computerNameLabel.BackColor = Color.FromArgb(240, 140, 0);
+                this.computerGamePointsLabel.ForeColor = Color.WhiteSmoke;
+                this.computerNameLabel.ForeColor = Color.WhiteSmoke;
+                this.userGamePointsLabel.BackColor = Color.FromArgb(5, 35, 35);
+                this.userNameLabel.BackColor = Color.FromArgb(240, 140, 0);
+                this.userGamePointsLabel.ForeColor = Color.WhiteSmoke;
+                this.userNameLabel.ForeColor = Color.WhiteSmoke;
+                this.computerCharacterPictureBox.Image = computerCharacterImage;
+                this.userCharacterPictureBox.Image = userCharacterImage;
 
                 foreach (var control in this.computerCardsControls)
                 {
                     if (!control.Empty && !control.InCenter)
                     {
                         if (control.Card == null)
+                        {
                             control.PictureBox.Image = cardBackImage;
+                        }
                         else
+                        {
                             control.PictureBox.Image = this.cardsImages[control.Card];
+                        }
                     }
                 }
                 foreach (var control in this.userCardsControls)
                 {
                     if (!control.Empty && !control.InCenter)
+                    {
                         control.PictureBox.Image = cardsImages[control.Card];
+                    }
                 }
             });
         }
@@ -592,10 +585,12 @@ namespace WIndowsFormsUI.Forms
                     else
                         this.UpdateNotificationLabel("Computer wins\n the game", this.computerPlayerMessageCloud, this.computerPlayerMessageLabel);
 
+                    this.UpdateStats(e.Item1, e.Item2);
+
                     Thread.Sleep(2000);
                     this.Close();
-                    MainMenuForm mmf = new MainMenuForm();
-                    mmf.Show();
+                    //MainMenuForm mmf = new MainMenuForm();
+                    //mmf.Show();
                 }
             });
         }
@@ -649,7 +644,7 @@ namespace WIndowsFormsUI.Forms
                         messageLabel.Text = message;
                     }
                             ));
-                    Thread.Sleep(2000);
+                    Thread.Sleep(1200);
                     Invoke(new Action(delegate
                     {
                         messageCloud.Visible = false;
@@ -667,17 +662,20 @@ namespace WIndowsFormsUI.Forms
 
         protected void pictureBox_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Left && this.isMyTurn)
+            if (e.Button == MouseButtons.Left && this.isMyTurn)
             {
                 if (((PictureBox)sender).Image != null)
                 {
                     this.location = new Point(e.X, e.Y);
                     this.Controls.SetChildIndex((PictureBox)sender, 0);
                     this.PlaySound(WIndowsFormsUI.Properties.Resources.cardPlace1);
+
                     foreach (var control in this.userCardsControls)
                     {
                         if (control.PictureBox != (PictureBox)sender && !control.Empty)
+                        {
                             control.PictureBox.Image = ChangeOpacity(control.PictureBox.Image, 0.5F);
+                        }
                     }
                 }
             }
@@ -690,12 +688,15 @@ namespace WIndowsFormsUI.Forms
                 this.panel1.BringToFront();
 
                 Point newLocation = ((PictureBox)sender).Location;
+
                 newLocation.X += e.X - location.X;
                 newLocation.Y += e.Y - location.Y;
+
                 if (newLocation.X < 230)
                     newLocation.X = 230;
                 if (newLocation.Y < 188)
                     newLocation.Y = 188;
+                
                 ((PictureBox)sender).Location = newLocation;
             }
         }
@@ -705,27 +706,29 @@ namespace WIndowsFormsUI.Forms
             if (this.isMyTurn)
             {
                 int index = userCardsControls.FindIndex(x => x.PictureBox.Equals(sender));
+                CardControl userControl = userCardsControls[index];
                 location = Point.Empty;
                 Point mouseLocation = new Point(e.X, e.Y);
-                if (userCardsControls[index].PictureBox.Bounds.IntersectsWith(new Rectangle(humanPlayedCardLocation, new Size(150, 100))))
+                if (userControl.PictureBox.Bounds.IntersectsWith(new Rectangle(humanPlayedCardLocation, new Size(150, 100))))
                 {
-                    userCardsControls[index].PictureBox.Location = this.humanPlayedCardLocation;
+                    userControl.PictureBox.Location = this.humanPlayedCardLocation;
+                    userControl.InCenter = true;
+                    userControl.Empty = true;
 
-                    userCardsControls[index].InCenter = true;
-                    //this.PlayedCard = myCardsOnTable[index];
                     this.userPlayer.Move(
                         new PlayerMove(PlayerMoveType.PlayCard, userCardsControls[index].Card, Announce.None));
-                    userPlayer.Signal.Set();
-                    userCardsControls[index].Empty = true;
+                    this.userPlayer.Signal.Set();
                     this.PlaySound(WIndowsFormsUI.Properties.Resources.cardSlide6);
                 }
                 else
-                    userCardsControls[index].PictureBox.Location = userCardsControls[index].DefaultLocation;
+                    userControl.PictureBox.Location = userCardsControls[index].DefaultLocation;
 
-                for (int i = 0; i < 6; i++)
+                foreach (var item in userCardsControls)
                 {
-                    if (userCardsControls[i].PictureBox != (PictureBox)sender && !userCardsControls[i].Empty)
-                        userCardsControls[i].PictureBox.Image = cardsImages[userCardsControls[i].Card];
+                    if (item.PictureBox != (PictureBox)sender && !item.Empty)
+                    {
+                        item.PictureBox.Image = cardsImages[item.Card];
+                    }
                 }
             }
         }
@@ -734,9 +737,8 @@ namespace WIndowsFormsUI.Forms
         {
             if (this.isMyTurn)
             {
-                userPlayer.Move(
-                        new PlayerMove(PlayerMoveType.ChangeTrump, null, Announce.None));
-                userPlayer.Signal.Set();
+                this.userPlayer.Move(new PlayerMove(PlayerMoveType.ChangeTrump, null, Announce.None));
+                this.userPlayer.Signal.Set();
             }
         }
 
@@ -744,9 +746,8 @@ namespace WIndowsFormsUI.Forms
         {
             if (this.isMyTurn)
             {
-                this.userPlayer.Move(
-                        new PlayerMove(PlayerMoveType.CloseGame, null, Announce.None));
-                userPlayer.Signal.Set();
+                this.userPlayer.Move(new PlayerMove(PlayerMoveType.CloseGame, null, Announce.None));
+                this.userPlayer.Signal.Set();
             }
         }
 
@@ -761,10 +762,9 @@ namespace WIndowsFormsUI.Forms
                     {
                         Invoke(new Action(delegate
                         {
-                            //((PictureBox)sender).Location =
-                            //  new Point(((PictureBox)sender).Location.X, ((PictureBox)sender).Location.Y - 3);
-                            userCardsControls[index].PictureBox.Location = new Point(
-                                userCardsControls[index].DefaultLocation.X, userCardsControls[index].DefaultLocation.Y - i * 3);
+                            userCardsControls[index].PictureBox.Location = 
+                                new Point(userCardsControls[index].DefaultLocation.X, 
+                                    userCardsControls[index].DefaultLocation.Y - i * 3);
                         }
                             ));
                         Thread.Sleep(10);
@@ -784,10 +784,9 @@ namespace WIndowsFormsUI.Forms
                     {
                         Invoke(new Action(delegate
                         {
-                            // ((PictureBox)sender).Location =
-                            //   new Point(((PictureBox)sender).Location.X, ((PictureBox)sender).Location.Y + 3);
-                            userCardsControls[index].PictureBox.Location = new Point(
-                               userCardsControls[index].DefaultLocation.X, userCardsControls[index].DefaultLocation.Y - 30 + i * 3);
+                            userCardsControls[index].PictureBox.Location = 
+                                new Point(userCardsControls[index].DefaultLocation.X, 
+                                    userCardsControls[index].DefaultLocation.Y - 30 + i * 3);
 
                         }
                             ));
@@ -818,19 +817,25 @@ namespace WIndowsFormsUI.Forms
         private void DrawDeck(int cardsInDeck)
         {
             Bitmap bitmap = new Bitmap(129, 169);
+
             using (Graphics gr = Graphics.FromImage(bitmap))
             {
                 for (int i = 1; i < cardsInDeck; i++)
+                {
                     gr.DrawImage(deckImage, 24 - i + 1, 24 - i + 1, 105, 147);
+                }
             }
 
             deckPictureBox.Image = bitmap;
 
             if (cardsInDeck == 1)
+            {
                 this.trumpCardPictureBox.BringToFront();
-
-            if (cardsInDeck == 0)
+            }
+            else if (cardsInDeck == 0)
+            {
                 this.trumpCardPictureBox.Image = null;
+            }
 
             if (this.CloseGame)
             {
@@ -855,24 +860,25 @@ namespace WIndowsFormsUI.Forms
             cardsInDeck--;
             DrawDeck(cardsInDeck);
 
+            CardControl currentControl = userCardsControls[index];
+
             ThreadPool.QueueUserWorkItem(delegate
                 {
                     for (int i = 1; i <= 15; i++)
                     {
                         Invoke(new Action(delegate
                         {
-                            userCardsControls[index].PictureBox.Location =
-                                new Point(userCardsControls[index].DefaultLocation.X,
-                                userCardsControls[index].DefaultLocation.Y - 30 + 2 * i);
+                            currentControl.PictureBox.Location =
+                                new Point(currentControl.DefaultLocation.X, currentControl.DefaultLocation.Y - 30 + 2 * i);
                         }));
                         Thread.Sleep(10);
                     }
                 });
 
-            userCardsControls[index].PictureBox.Image = this.cardsImages[card];
-            userCardsControls[index].Card = card;
-            userCardsControls[index].Empty = false;
-            userCardsControls[index].InCenter = false;
+            currentControl.PictureBox.Image = this.cardsImages[card];
+            currentControl.Card = card;
+            currentControl.Empty = false;
+            currentControl.InCenter = false;
             this.PlaySound(WIndowsFormsUI.Properties.Resources.deal);
         }
 
@@ -888,31 +894,29 @@ namespace WIndowsFormsUI.Forms
             cardsInDeck--;
             DrawDeck(cardsInDeck);
 
+            CardControl currentControl = computerCardsControls[index];
+
             ThreadPool.QueueUserWorkItem(delegate
             {
-                lock (cardBackImage)
-                { computerCardsControls[index].PictureBox.Image = cardBackImage; }
+                //lock (cardBackImage)
+                //{ computerCardsControls[index].PictureBox.Image = cardBackImage; }
+                currentControl.PictureBox.Image = cardBackImage;
                 for (int i = 1; i <= 15; i++)
                 {
                     float a;
                     Invoke(new Action(delegate
                     {
                         a = ((float)i) / 20.0F;
-                        computerCardsControls[index].PictureBox.Location =
-                            new Point(computerCardsControls[index].DefaultLocation.X,
-                            computerCardsControls[index].DefaultLocation.Y + 30 - 2 * i);
-                        //computerCardsControls[index].PictureBox.Image =
-                        //  ChangeOpacity(cardBackImage, a);
+                        currentControl.PictureBox.Location = 
+                            new Point(currentControl.DefaultLocation.X, currentControl.DefaultLocation.Y + 30 - 2 * i);
                     }));
                     Thread.Sleep(10);
                 }
             });
 
-            GC.Collect();
-            computerCardsControls[index].PictureBox.Location = computerCardsControls[index].DefaultLocation;
-            //computerCardsControls[index].PictureBox.Image = cardBackImage;
-            computerCardsControls[index].Empty = false;
-            computerCardsControls[index].InCenter = false;
+            currentControl.PictureBox.Location = computerCardsControls[index].DefaultLocation;
+            currentControl.Empty = false;
+            currentControl.InCenter = false;
             this.PlaySound(WIndowsFormsUI.Properties.Resources.deal);
         }
 
@@ -920,15 +924,15 @@ namespace WIndowsFormsUI.Forms
         {
             Image image = new Bitmap(this.cardsImages[card]);
             image.RotateFlip(RotateFlipType.Rotate90FlipNone);
-            trumpCardPictureBox.Image = image;
+            this.trumpCardPictureBox.Image = image;
         }
 
         public void DrawEmptyDeck()
         {
-            deckPictureBox.Image = null;
-            trumpCardPictureBox.BringToFront();
+            this.deckPictureBox.Image = null;
+            this.trumpCardPictureBox.BringToFront();
             this.cardsLeftLabel.Text = "0";
-            trumpCardPictureBox.Image = null;
+            this.trumpCardPictureBox.Image = null;
         }
 
         public void ComputerPlayCardToCenter(Card card, int index)
@@ -941,26 +945,28 @@ namespace WIndowsFormsUI.Forms
                 if (index + 1 == j)
                     break;
             }
-            computerCardsControls[i].PictureBox.Image = cardsImages[card];
-            computerCardsControls[i].PictureBox.Location = computerPlayedCardLocation;
-            computerCardsControls[i].PictureBox.BringToFront();
-            computerCardsControls[i].InCenter = true;
-            computerCardsControls[i].Empty = true;
+
+            CardControl currentControl = computerCardsControls[i];
+
+            currentControl.PictureBox.Image = cardsImages[card];
+            currentControl.PictureBox.Location = computerPlayedCardLocation;
+            currentControl.PictureBox.BringToFront();
+            currentControl.InCenter = true;
+            currentControl.Empty = true;
             PlaySound(WIndowsFormsUI.Properties.Resources.cardSlide6);
         }
 
         public void BackCardOnItsPlace(Card card)
         {
-            Image image = this.cardsImages[card];
-            for (int i = 0; i < 6; i++)
+            foreach (var item in userCardsControls)
             {
-                if (!(userCardsControls[i].PictureBox.Image == null))
+                if(!(item.PictureBox.Image==null))
                 {
-                    if (userCardsControls[i].Card.Equals(card))
+                    if(item.Card.Equals(card))
                     {
-                        userCardsControls[i].PictureBox.Location = userCardsControls[i].DefaultLocation;
-                        userCardsControls[i].Empty = false;
-                        userCardsControls[i].InCenter = false; //ovo je dodato
+                        item.PictureBox.Location = item.DefaultLocation;
+                        item.Empty = false;
+                        item.InCenter = false;
                         break;
                     }
                 }
@@ -1016,6 +1022,47 @@ namespace WIndowsFormsUI.Forms
             notificationlabel.Visible = false;
             StartGame();
             this.deckPictureBox.Click -= deckPictureBox_Click_1;
+        }
+
+        private void UpdateStats(int myRoundPoints, int computerRoundPoints)
+        {
+            if (this.level == GameLevel.Easy)
+            {
+                Settings.Default.totalGamesVersusEasy++;
+                Settings.Default.totalRoundWinsVsEasy += myRoundPoints;
+                Settings.Default.totalRoundLossesVsEasy += computerRoundPoints;
+
+                if (myRoundPoints > computerRoundPoints)
+                {
+                    Settings.Default.totalWinsVersusEasy++;
+                }
+            }
+            else if (this.level == GameLevel.Normal)
+            {
+                Settings.Default.totalGamesVersusNormal++;
+                Settings.Default.totalRoundWinsVsNormal += myRoundPoints;
+                Settings.Default.totalRoundLossesVsNormal += computerRoundPoints;
+
+                if (myRoundPoints > computerRoundPoints)
+                {
+                    Settings.Default.totalWinsVersusNormal++;
+                }
+            }
+            else if (this.level == GameLevel.Hard)
+            {
+                Settings.Default.totalGamesVersusHard++;
+                Settings.Default.totalRoundWinsVsHard += myRoundPoints;
+                Settings.Default.totalRoundLossesVsHard += computerRoundPoints;
+
+                if (myRoundPoints > computerRoundPoints)
+                {
+                    Settings.Default.totalWinsVersusHard++;
+                }
+            }
+
+            Settings.Default.lastUpdate = DateTime.Now;
+
+            Settings.Default.Save();
         }
     }
 }

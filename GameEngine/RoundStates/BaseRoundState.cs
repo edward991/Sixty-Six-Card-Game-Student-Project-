@@ -25,7 +25,9 @@ namespace GameEngine.RoundStates
         internal void Close()
         {
             if (this.CanClose())
+            {
                 this.round.State = new FinalRoundState(this.round);
+            }
         }
     }
 }

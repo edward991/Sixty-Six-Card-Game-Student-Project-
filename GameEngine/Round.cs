@@ -69,10 +69,14 @@ namespace GameEngine
             UpdatePoints(hand);
 
             if (hand.GameClosedInThisHand == PlayerPosition.FirstPlayer || hand.GameClosedInThisHand == PlayerPosition.SecondPlayer)
+            {
                 ClosedByPlayer = hand.GameClosedInThisHand;
+            }
 
             if (!IsFinished())
+            {
                 DrawNewCards();
+            }
 
             State.PlayHand(deck.CardsLeft());
         }
@@ -96,7 +100,6 @@ namespace GameEngine
 
         protected virtual void UpdateRoundInfo()
         {
-
         }
 
         protected virtual void UpdatePoints(Hand hand)
@@ -105,13 +108,17 @@ namespace GameEngine
             {
                 FirstPlayerRoundPoints += hand.FirstPlayerCard.Value() + hand.SecondPlayerCard.Value();
                 if (firstPlayerCards.Count == 0 && ClosedByPlayer == PlayerPosition.NoOne)
+                {
                     FirstPlayerRoundPoints += 10;
+                }
             }
             else if (hand.HandWinner == PlayerPosition.SecondPlayer)
             {
                 SecondPlayerRoundPoints += hand.FirstPlayerCard.Value() + hand.SecondPlayerCard.Value();
                 if (secondPlayerCards.Count == 0 && ClosedByPlayer == PlayerPosition.NoOne)
+                {
                     SecondPlayerRoundPoints += 10;
+                }
             }
 
             FirstPlayerRoundPoints += (int)hand.FirstPlayerAnnounce;
@@ -141,18 +148,26 @@ namespace GameEngine
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < 3; j++)
+                {
                     GiveCardToFirstPlayer();
+                }
                 for (int j = 0; j < 3; j++)
+                {
                     GiveCardToSecondPlayer();
+                }
             }
         }
 
         protected bool IsFinished()
         {
             if (FirstPlayerRoundPoints >= 66 || SecondPlayerRoundPoints >= 66)
+            {
                 return true;
+            }
             if (firstPlayerCards.Count == 0 || secondPlayerCards.Count == 0)
+            {
                 return true;
+            }
             return false;
         }
     }

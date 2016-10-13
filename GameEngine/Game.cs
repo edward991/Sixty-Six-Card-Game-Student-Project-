@@ -65,22 +65,36 @@ namespace GameEngine
             if (round.FirstPlayerRoundPoints > round.SecondPlayerRoundPoints)
             {
                 FirstToPlayInNextRound = PlayerPosition.SecondPlayer;
+
                 if (round.SecondPlayerRoundPoints >= 33)
+                {
                     FirstPlayerGamePoints += 1;
+                }
                 else if (round.SecondPlayerRoundPoints > 0)
+                {
                     FirstPlayerGamePoints += 2;
+                }
                 else
+                {
                     FirstPlayerGamePoints += 3;
+                }
             }
             else if (round.FirstPlayerRoundPoints < round.SecondPlayerRoundPoints)
             {
                 FirstToPlayInNextRound = PlayerPosition.FirstPlayer;
+
                 if (round.FirstPlayerRoundPoints >= 33)
+                {
                     SecondPlayerGamePoints += 1;
+                }
                 else if (round.FirstPlayerRoundPoints > 0)
+                {
                     SecondPlayerGamePoints += 2;
+                }
                 else
+                {
                     SecondPlayerGamePoints += 3;
+                }
 
             }
         }
@@ -88,9 +102,13 @@ namespace GameEngine
         protected bool IsFinished()
         {
             if (FirstPlayerGamePoints >= 11 || SecondPlayerGamePoints >= 11)
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
     }
 }

@@ -30,7 +30,6 @@ namespace GameEngine.Players
         public void ResetCards()
         {
             currentCards.Clear();
-            //currentCards = new List<Card>();
         }
 
         protected Announce PossibleAnnounce(Card card, Card trumpCard)
@@ -40,9 +39,13 @@ namespace GameEngine.Players
                 if (currentCards.Contains(new Card(CardType.King, card.Suit)))
                 {
                     if (card.Suit == trumpCard.Suit)
+                    {
                         return Announce.Fourty;
+                    }
                     else
+                    {
                         return Announce.Twenty;
+                    }
                 }
             }
             else if (card.Type == CardType.King)
@@ -50,9 +53,13 @@ namespace GameEngine.Players
                 if (currentCards.Contains(new Card(CardType.Queen, card.Suit)))
                 {
                     if (card.Suit == trumpCard.Suit)
+                    {
                         return Announce.Fourty;
+                    }
                     else
+                    {
                         return Announce.Twenty;
+                    }
                 }
             }
             return Announce.None;

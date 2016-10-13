@@ -91,7 +91,6 @@ namespace GameEngine
 
             handContext.SecondPlayedCard = secondToPlayMove.PlayedCard;
 
-            //ovo mozes u poseban metod
             if (firstToPlayInHand == this.firstPlayer)
             {
                 this.FirstPlayerCard = firstToPlayMove.PlayedCard;
@@ -128,7 +127,9 @@ namespace GameEngine
                     this.GameClosedInThisHand = PlayerPosition.FirstPlayer;
                 }
                 else
+                {
                     this.GameClosedInThisHand = PlayerPosition.SecondPlayer;
+                }
             }
 
             if (firstToPlayAction.Type == PlayerMoveType.ChangeTrump)
@@ -160,24 +161,36 @@ namespace GameEngine
             if (this.FirstPlayerCard.Suit == this.SecondPlayerCard.Suit)
             {
                 if (this.FirstPlayerCard.Value() > this.SecondPlayerCard.Value())
+                {
                     return PlayerPosition.FirstPlayer;
+                }
                 else
+                {
                     return PlayerPosition.SecondPlayer;
+                }
             }
 
             if (this.FirstToPlay == PlayerPosition.FirstPlayer)
             {
                 if (this.SecondPlayerCard.Suit == this.deck.TrumpCard.Suit)
+                {
                     return PlayerPosition.SecondPlayer;
+                }
                 else
+                {
                     return PlayerPosition.FirstPlayer;
+                }
             }
             else
             {
                 if (this.FirstPlayerCard.Suit == this.deck.TrumpCard.Suit)
+                {
                     return PlayerPosition.FirstPlayer;
+                }
                 else
+                {
                     return PlayerPosition.SecondPlayer;
+                }
             }
         }
     }

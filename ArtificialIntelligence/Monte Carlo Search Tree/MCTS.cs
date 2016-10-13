@@ -52,8 +52,7 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
 
                 selectedNodes.Clear();
 
-                i++;
-                if (i >= numberOfIterations)
+                if (++i >= numberOfIterations)
                     break;
             }
 

@@ -4,6 +4,7 @@ using GameEngine.Players;
 using GameEngine.RoundStates;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ArtificialIntelligence.MonteCarloSearchTree
 {
@@ -157,6 +158,7 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
                             null, Announce.None, newState, TrumpCard,
                             (CardsLeft - 2 > 0) ? CardsLeft - 2 : 0, ClosedByPlayer));
                 }
+                
                 foreach (var myNewDrawnCard in possibleOpponentNewCards)
                 {
                     List<Card> myCardsTempList = new List<Card>(myNewCards);
@@ -178,7 +180,7 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
 
                     if (newState is FinalRoundState && this.State is FinalRoundState)
                         break;
-                }
+                }                
             }
             else
             {
@@ -199,7 +201,7 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
                                 null, Announce.None, newState, (newTrumpCard != null) ? newTrumpCard : TrumpCard,
                                 (CardsLeft - 2 > 0) ? CardsLeft - 2 : 0, ClosedByPlayer));
                 }
-                else if(possibleOpponentNewCards.Count ==1)
+                else if (possibleOpponentNewCards.Count == 1)
                 {
                     newGamePositions.Add(
                                 new GamePosition(myNewCards, new List<Card>(), MyPoints, OpponentPoints + handValue + (int)PlayedCardAnnounce,
@@ -208,37 +210,37 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
                 }
                 foreach (var opponentPlayedCard in possibleOpponentNewCards)
                 {
-                    foreach (var myNewDrawnCard in possibleOpponentNewCards)
-                    {
-                        if (!myNewDrawnCard.Equals(opponentPlayedCard)
-                            && PlayerMoveValidator.IsValid(new PlayerMove(
-                                PlayerMoveType.PlayCard, opponentPlayedCard, Announce.None), context,
-                                possibleOpponentNewCards))
+                        foreach (var myNewDrawnCard in possibleOpponentNewCards)
                         {
-                            List<Card> myCardsTempList = new List<Card>(myNewCards);
-                            List<Card> opponentCardsTempList = new List<Card>(possibleOpponentNewCards);
-                            opponentCardsTempList.Remove(opponentPlayedCard);
-
-                            if (!(newState is FinalRoundState && this.State is FinalRoundState))
+                            if (!myNewDrawnCard.Equals(opponentPlayedCard)
+                                && PlayerMoveValidator.IsValid(new PlayerMove(
+                                    PlayerMoveType.PlayCard, opponentPlayedCard, Announce.None), context,
+                                    possibleOpponentNewCards))
                             {
-                                if (State is TwoCardsLeftRoundState)
-                                    myCardsTempList.Add(TrumpCard);
-                                else
+                                List<Card> myCardsTempList = new List<Card>(myNewCards);
+                                List<Card> opponentCardsTempList = new List<Card>(possibleOpponentNewCards);
+                                opponentCardsTempList.Remove(opponentPlayedCard);
+
+                                if (!(newState is FinalRoundState && this.State is FinalRoundState))
                                 {
-                                    myCardsTempList.Add(myNewDrawnCard);
-                                    opponentCardsTempList.Remove(myNewDrawnCard);
+                                    if (State is TwoCardsLeftRoundState)
+                                        myCardsTempList.Add(TrumpCard);
+                                    else
+                                    {
+                                        myCardsTempList.Add(myNewDrawnCard);
+                                        opponentCardsTempList.Remove(myNewDrawnCard);
+                                    }
                                 }
+
+                                newGamePositions.Add(
+                                    new GamePosition(myCardsTempList, opponentCardsTempList, MyPoints, OpponentPoints + handValue + (int)PlayedCardAnnounce,
+                                    opponentPlayedCard, Announce.None, newState, (newTrumpCard != null) ? newTrumpCard : TrumpCard,
+                                    (CardsLeft - 2 > 0) ? CardsLeft - 2 : 0, ClosedByPlayer));
+
+                                if ((newState is FinalRoundState && this.State is FinalRoundState) || State is TwoCardsLeftRoundState)
+                                    break;
                             }
-
-                            newGamePositions.Add(
-                                new GamePosition(myCardsTempList, opponentCardsTempList, MyPoints, OpponentPoints + handValue + (int)PlayedCardAnnounce,
-                                opponentPlayedCard, Announce.None, newState, (newTrumpCard != null) ? newTrumpCard : TrumpCard,
-                                (CardsLeft - 2 > 0) ? CardsLeft - 2 : 0, ClosedByPlayer));
-
-                            if ((newState is FinalRoundState && this.State is FinalRoundState) || State is TwoCardsLeftRoundState)
-                                break;
                         }
-                    }
                 }
             }
 
@@ -317,7 +319,7 @@ namespace ArtificialIntelligence.MonteCarloSearchTree
                                         null, Announce.None, newState, this.TrumpCard,
                                         (this.CardsLeft - 2 > 0) ? this.CardsLeft - 2 : 0, this.ClosedByPlayer));
                         }
-                        else if(possibleOpponentNewCards.Count == 1)
+                        else if (possibleOpponentNewCards.Count == 1)
                         {
                             newGamePositions.Add(new GamePosition(
                                         myNewCards, new List<Card>(), this.MyPoints + (int)move.PlayerAnnounce, this.OpponentPoints + handValue,

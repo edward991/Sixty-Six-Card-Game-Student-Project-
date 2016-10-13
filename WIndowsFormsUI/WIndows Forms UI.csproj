@@ -70,6 +70,12 @@
     <Compile Include="Forms\GameRulesForm.Designer.cs">
       <DependentUpon>GameRulesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\StatsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StatsForm.Designer.cs">
+      <DependentUpon>StatsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\SinglePlayerForm.cs">
@@ -82,6 +88,7 @@
     <Compile Include="Game\UIGame.cs" />
     <Compile Include="Players\HumanUIPlayer.cs" />
     <Compile Include="Game\UIRound.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="Forms\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameRulesForm.resx">
       <DependentUpon>GameRulesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StatsForm.resx">
+      <DependentUpon>StatsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -328,6 +338,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComputerCharacter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

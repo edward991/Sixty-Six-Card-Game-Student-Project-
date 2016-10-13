@@ -43,14 +43,20 @@ namespace GameEngine.Cards
         {
             this.TrumpCard = card;
             if (this.cards.Count > 0)
+            {
                 this.cards[0] = card;
+            }
         }
 
         private void AddCardsInList()
         {
             foreach (CardType type in Enum.GetValues(typeof(CardType)))
+            {
                 foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
+                {
                     cards.Add(new Card(type, suit));
+                }
+            }
         }
 
         private void ShuffleDeck()
